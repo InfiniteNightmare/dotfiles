@@ -1,0 +1,127 @@
+@import "mocha.css";
+
+* {
+  font-family: "Noto Sans", "Symbols Nerd Font";
+  font-size: 17px;
+  min-height: 0;
+}
+
+#waybar {
+  background: transparent; /* Make the bar itself transparent */
+  color: @text;
+  /* margin: 5px 5px; */
+}
+
+#workspaces {
+  border-radius: 1rem;
+  margin: 5px;
+  background-color: @surface0;
+  margin-left: 1rem;
+}
+
+#workspaces button {
+  color: @lavender;
+  border-radius: 1rem;
+  padding: 0.4rem;
+}
+
+#workspaces button.active {
+  color: @sky;
+  border-radius: 1rem;
+}
+
+#workspaces button:hover {
+  color: @sapphire;
+  border-radius: 1rem;
+}
+
+#window,
+#mpris,
+#tray,
+#idle_inhibitor {
+  background-color: @surface0;
+  padding: 0.4rem 1rem; /* Unified padding */
+  margin: 5px; /* Unified margin for spacing */
+  border-radius: 1rem; /* Unified border-radius */
+}
+
+/* Grouped modules */
+#pulseaudio,
+#network,
+#power-profiles-daemon,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#battery,
+#clock,
+#custom-notification {
+  background-color: @surface0;
+  padding: 0.4rem 1rem;
+  margin: 5px 0;
+  border-right: 1px solid @crust;
+}
+
+#pulseaudio {
+  border-radius: 1rem 0 0 1rem;
+  margin-left: 5px;
+}
+
+#custom-notification {
+  border-radius: 0 1rem 1rem 0;
+  margin-right: 5px;
+  border-right: none; /* The last module doesn't need a separator */
+}
+
+#custom-power,
+#custom-lock {
+    background-color: @surface0;
+    padding: 0.4rem 1rem;
+    margin: 5px;
+    border-radius: 1rem;
+}
+
+#window {
+  color: @lavender;
+}
+
+#clock {
+  color: @blue;
+}
+
+#battery {
+  color: @green;
+}
+
+#battery.charging {
+  color: @green;
+}
+
+#battery.warning:not(.charging) {
+  color: @red;
+}
+
+#backlight {
+  color: @yellow;
+}
+
+#pulseaudio {
+  color: @maroon;
+}
+
+#custom-music {
+  color: @mauve;
+}
+
+#custom-lock {
+    color: @lavender;
+}
+
+#custom-power {
+    color: @red;
+}
+
+#tray {
+  margin-right: 1rem;
+  border-radius: 1rem;
+}
